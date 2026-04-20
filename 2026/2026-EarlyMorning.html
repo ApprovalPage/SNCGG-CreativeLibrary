@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Early Morning - Creative Library</title>
+    <style>
+        :root {
+            --bg-body: #121212;
+            --bg-container: #1e1e1e;
+            --bg-card: #222222;
+            --border-color: #333333;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent: #4a90e2;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background-color: var(--bg-container);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+        }
+
+        h2.main-title {
+            font-size: 28px;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .campaign-label {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        h3.section-title {
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        h4.subsection-title {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+        }
+
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .asset-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            transition: transform 0.2s;
+        }
+
+        .asset-card:hover {
+            transform: translateY(-2px);
+            border-color: #555;
+        }
+
+        .img-container {
+            width: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            border-radius: 4px;
+        }
+
+        .asset-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .asset-card img:hover {
+            opacity: 0.8;
+        }
+
+        .asset-caption {
+            font-size: 13px;
+            color: var(--text-main);
+            text-align: center;
+            word-break: break-all;
+            margin: 0;
+        }
+
+        /* Modal / Lightbox Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 80vh;
+            object-fit: contain;
+            animation-name: zoom;
+            animation-duration: 0.3s;
+        }
+
+        .modal-caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 15px 0;
+            font-size: 16px;
+            animation-name: zoom;
+            animation-duration: 0.3s;
+        }
+
+        @keyframes zoom {
+            from {transform:scale(0.95); opacity: 0;}
+            to {transform:scale(1); opacity: 1;}
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="main-title"><span class="campaign-label">Campaign</span> Early Morning</h2>
+
+    <h3 class="section-title">Display - Static</h3>
+    
+    <h4 class="subsection-title">Value Offer - Campaign 1</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-1200x250.jpg?raw=true" alt="SN-AM-Display-Campaign-1-1200x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-1200x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-970x250.jpg?raw=true" alt="SN-AM-Display-Campaign-1-970x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-970x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-300x600.jpg?raw=true" alt="SN-AM-Display-Campaign-1-300x600"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-300x600</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-160x600.jpg?raw=true" alt="SN-AM-Display-Campaign-1-160x600"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-160x600</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-300x250.jpg?raw=true" alt="SN-AM-Display-Campaign-1-300x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-300x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-728x90.jpg?raw=true" alt="SN-AM-Display-Campaign-1-728x90"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-728x90</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-468x60.jpg?raw=true" alt="SN-AM-Display-Campaign-1-468x60"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-468x60</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-320x106.jpg?raw=true" alt="SN-AM-Display-Campaign-1-320x106"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-320x106</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-320x50.jpg?raw=true" alt="SN-AM-Display-Campaign-1-320x50"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-320x50</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-1-300x60.jpg?raw=true" alt="SN-AM-Display-Campaign-1-300x60"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-1-300x60</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Campaign 2</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-1200x250.jpg?raw=true" alt="SN-AM-Display-Campaign-2-1200x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-1200x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-970x250.jpg?raw=true" alt="SN-AM-Display-Campaign-2-970x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-970x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-300x600.jpg?raw=true" alt="SN-AM-Display-Campaign-2-300x600"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-300x600</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-160x600.jpg?raw=true" alt="SN-AM-Display-Campaign-2-160x600"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-160x600</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-300x250.jpg?raw=true" alt="SN-AM-Display-Campaign-2-300x250"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-300x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-728x90.jpg?raw=true" alt="SN-AM-Display-Campaign-2-728x90"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-728x90</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-468x60.jpg?raw=true" alt="SN-AM-Display-Campaign-2-468x60"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-468x60</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-320x106.jpg?raw=true" alt="SN-AM-Display-Campaign-2-320x106"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-320x106</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-320x50.jpg?raw=true" alt="SN-AM-Display-Campaign-2-320x50"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-320x50</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-AM-Display-Campaign-2-300x60.jpg?raw=true" alt="SN-AM-Display-Campaign-2-300x60"></div>
+            <p class="asset-caption">SN-AM-Display-Campaign-2-300x60</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Food and Beverage</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-FB-Display-160x600.jpg?raw=true" alt="SN-FB-Display-160x600"></div>
+            <p class="asset-caption">SN-FB-Display-160x600</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-FB-Display-300x250.jpg?raw=true" alt="SN-FB-Display-300x250"></div>
+            <p class="asset-caption">SN-FB-Display-300x250</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-FB-Display-300x250_1.jpg?raw=true" alt="SN-FB-Display-300x250_1"></div>
+            <p class="asset-caption">SN-FB-Display-300x250_1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/1Display/SN-FB-Display-728x90.jpg?raw=true" alt="SN-FB-Display-728x90"></div>
+            <p class="asset-caption">SN-FB-Display-728x90</p>
+        </div>
+    </div>
+
+    <h3 class="section-title">Stories</h3>
+    
+    <h4 class="subsection-title">Value Offer - Campaign 1</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1%262-BestView-1.jpg?raw=true" alt="SN-AM-Story-Campaign-1&2-BestView-1"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1&2-BestView-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1-BestView-2.jpg?raw=true" alt="SN-AM-Story-Campaign-1-BestView-2"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1-BestView-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1%262-BestView-3.jpg?raw=true" alt="SN-AM-Story-Campaign-1&2-BestView-3"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1&2-BestView-3</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Campaign 2</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1%262-BestView-1.jpg?raw=true" alt="SN-AM-Story-Campaign-1&2-BestView-1"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1&2-BestView-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-2-BestView-2.jpg?raw=true" alt="SN-AM-Story-Campaign-2-BestView-2"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-2-BestView-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1%262-BestView-3.jpg?raw=true" alt="SN-AM-Story-Campaign-1&2-BestView-3"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1&2-BestView-3</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Food and Beverage</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-EarlyBird-1.jpg?raw=true" alt="SN-AM-Story-EarlyBird-1"></div>
+            <p class="asset-caption">SN-AM-Story-EarlyBird-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-EarlyBird-2.jpg?raw=true" alt="SN-AM-Story-EarlyBird-2"></div>
+            <p class="asset-caption">SN-AM-Story-EarlyBird-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-EarlyBird-3.jpg?raw=true" alt="SN-AM-Story-EarlyBird-3"></div>
+            <p class="asset-caption">SN-AM-Story-EarlyBird-3</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Type On - Campaign 1</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-1.jpg?raw=true" alt="SN-AM-Story-TypeOn-1"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-2.jpg?raw=true" alt="SN-AM-Story-TypeOn-2"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-3.jpg?raw=true" alt="SN-AM-Story-TypeOn-3"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-3</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-4.jpg?raw=true" alt="SN-AM-Story-TypeOn-4"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-4</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-1-TypeOn-5.jpg?raw=true" alt="SN-AM-Story-Campaign-1-TypeOn-5"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-5</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Type On - Campaign 2</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-1.jpg?raw=true" alt="SN-AM-Story-TypeOn-1"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-2.jpg?raw=true" alt="SN-AM-Story-TypeOn-2"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-3.jpg?raw=true" alt="SN-AM-Story-TypeOn-3"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-3</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-4.jpg?raw=true" alt="SN-AM-Story-TypeOn-4"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-4</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-2-TypeOn-5.jpg?raw=true" alt="SN-AM-Story-Campaign-2-TypeOn-5"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-5</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Type On - Campaign 4</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-1.jpg?raw=true" alt="SN-AM-Story-TypeOn-1"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-1</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-2.jpg?raw=true" alt="SN-AM-Story-TypeOn-2"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-2</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-3.jpg?raw=true" alt="SN-AM-Story-TypeOn-3"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-3</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-TypeOn-4.jpg?raw=true" alt="SN-AM-Story-TypeOn-4"></div>
+            <p class="asset-caption">SN-AM-Story-TypeOn-4</p>
+        </div>
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/2Story/SN-AM-Story-Campaign-4-TypeOn-5.jpg?raw=true" alt="SN-AM-Story-Campaign-4-TypeOn-5"></div>
+            <p class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-5</p>
+        </div>
+    </div>
+
+    <h3 class="section-title">Social Post</h3>
+    
+    <h4 class="subsection-title">Food and Beverage</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/3Social-Post/SN-AM-SocialPost-520ft.jpg?raw=true" alt="SN-AM-SocialPost-520ft"></div>
+            <p class="asset-caption">SN-AM-SocialPost-520ft</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Campaign 1</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/3Social-Post/SN-AM-SocialPost-Campaign-1-StartsItAll.jpg?raw=true" alt="SN-AM-SocialPost-Campaign-1-StartsItAll"></div>
+            <p class="asset-caption">SN-AM-SocialPost-Campaign-1-StartsItAll</p>
+        </div>
+    </div>
+
+    <h4 class="subsection-title">Value Offer - Campaign 2</h4>
+    <div class="asset-grid">
+        <div class="asset-card">
+            <div class="img-container"><img src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/EarlyMorning/3Social-Post/SN-AM-SocialPost-Campaign-2-StartsItAll.jpg?raw=true" alt="SN-AM-SocialPost-Campaign-2-StartsItAll"></div>
+            <p class="asset-caption">SN-AM-SocialPost-Campaign-2-StartsItAll</p>
+        </div>
+    </div>
+
+</div>
+
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption" class="modal-caption"></div>
+</div>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("imageModal");
+
+    // Get the modal image and caption elements
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    
+    // Get all images within the asset cards
+    var images = document.querySelectorAll('.img-container img');
+
+    // Attach click event to each image to open the modal
+    images.forEach(function(img) {
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Close the modal when the user clicks on <span> (x)
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside the image
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>
+</html>
