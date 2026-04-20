@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaign Reference - Combo - Awe</title>
+    <title>Creative Library - Combo - Awe</title>
     <style>
         :root {
             --bg-main: #121212;
@@ -12,6 +12,7 @@
             --border-color: #333333;
             --text-primary: #FFFFFF;
             --text-secondary: #AAAAAA;
+            --text-muted: #888888; /* New light grey for "Campaign" */
             --text-caption: #CCCCCC;
             --accent-glow: rgba(255, 255, 255, 0.15);
         }
@@ -36,6 +37,11 @@
             font-weight: 600;
             margin: 0;
             letter-spacing: -0.5px;
+        }
+
+        .campaign-label {
+            color: var(--text-muted);
+            margin-right: 8px;
         }
 
         h2 {
@@ -154,7 +160,7 @@
 <body>
 
     <div class="header">
-        <h1>Campaign: Combo - Awe</h1>
+        <h1><span class="campaign-label">Campaign</span> Combo - Awe</h1>
     </div>
 
     <div class="section-card">
