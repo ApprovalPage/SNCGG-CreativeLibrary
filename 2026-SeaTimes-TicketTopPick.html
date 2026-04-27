@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Library</title>
+    <link rel="stylesheet" href="style.css">
+	
+<script>
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /*loop through a collection of all HTML elements:*/
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("w3-include-html");
+    if (file) {
+      /*make an HTTP request using the attribute value as the file name:*/
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4) {
+          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          /*remove the attribute, and call this function once more:*/
+          elmnt.removeAttribute("w3-include-html");
+          includeHTML();
+        }
+      }      
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /*exit the function:*/
+      return;
+    }
+  }
+};
+</script>
+	
+</head>
+<body>
+
+<div w3-include-html="menu.html"></div>
+
+<script>
+includeHTML();
+</script>
+	
+    <div class="header">
+        <h1><span class="campaign-label">2026</span>Seattle Times</h1>
+    </div>
+
+    <div class="section-card">
+        <h2>Ticket Top Pick banners</h2>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-1200x250.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-1200x250.jpg?raw=true">
+                <div class="asset-caption">1200x250</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-300x250.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-300x250.jpg?raw=true">
+                <div class="asset-caption">300x250</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-300x600.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-300x600.jpg?raw=true">
+                <div class="asset-caption">300x600</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-320x106.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-320x106.jpg?raw=true">
+                <div class="asset-caption">320x106</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-728x90.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-728x90.jpg?raw=true">
+                <div class="asset-caption">728x90</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-970x250.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/SeaTimes/TicketTopPick/SN-AA-Display-970x250.jpg?raw=true">
+                <div class="asset-caption">970x250</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="assetModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFullSize">
+    </div>
+
+    <script>
+        const modal = document.getElementById("assetModal");
+        const modalImg = document.getElementById("imgFullSize");
+
+        function openModal(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            modalImg.src = "";
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+
+</body>
+</html>
