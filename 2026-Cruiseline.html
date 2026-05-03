@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Library - Cruiseline/Shipmate</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        }
+        document.addEventListener("DOMContentLoaded", includeHTML);
+    </script>
+</head>
+<body>
+
+    <div w3-include-html="menu.html"></div>
+
+    <div class="header">
+        <h1><span class="campaign-label">2026</span> Cruiseline/Shipmate</h1>
+    </div>
+
+    <div class="section-card">
+        <h2 id="ros">ROS</h2>
+        
+        <h3 id="combo-awe">Combo Awe</h3>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_160x600B.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_160x600B.jpg?raw=true">
+                <div class="asset-caption">160x600B</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_300x250A.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_300x250A.jpg?raw=true">
+                <div class="asset-caption">300x250A</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_300x600.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_300x600.jpg?raw=true">
+                <div class="asset-caption">300x600</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_320x50.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_320x50.jpg?raw=true">
+                <div class="asset-caption">320x50</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_468x60.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_468x60.jpg?raw=true">
+                <div class="asset-caption">468x60</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_728x90A.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/ComboAwe/ComboAwe_728x90A.jpg?raw=true">
+                <div class="asset-caption">728x90A</div>
+            </div>
+        </div>
+
+        <h3 id="early-morning">Early Morning</h3>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-160x600.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-160x600.jpg?raw=true">
+                <div class="asset-caption">160x600</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-300x250.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-300x250.jpg?raw=true">
+                <div class="asset-caption">300x250</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-300x600.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-300x600.jpg?raw=true">
+                <div class="asset-caption">300x600</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-320x50.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-320x50.jpg?raw=true">
+                <div class="asset-caption">320x50</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-468x60.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-468x60.jpg?raw=true">
+                <div class="asset-caption">468x60</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-728x90.jpg?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Cruiseline/ROS/EarlyMorning/SN-AM-Display-Campaign-1-cruise-728x90.jpg?raw=true">
+                <div class="asset-caption">728x90</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="assetModal" class="modal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="imgFullSize">
+    </div>
+
+    <script>
+        const modal = document.getElementById("assetModal");
+        const modalImg = document.getElementById("imgFullSize");
+
+        function openModal(src) {
+            modal.style.display = "flex";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            modal.style.display = "none";
+            modalImg.src = "";
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+</body>
+</html>
