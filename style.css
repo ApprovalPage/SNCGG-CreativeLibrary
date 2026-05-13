@@ -76,9 +76,8 @@ h3 {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    /* Removed justify-content: space-between to allow manual centering */
     align-items: center; 
-    height: 300px; /* Optional: Set a consistent height for all cards if desired */
+    height: 300px;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
@@ -91,10 +90,10 @@ h3 {
 
 .asset-thumbnail {
     max-width: 100%;
-    max-height: 200px; /* Limits the image size */
+    max-height: 200px;
     object-fit: contain;
     border-radius: 4px;
-    margin: auto 0; /* Key change: This pushes the image to the vertical center of the available space */
+    margin: auto 0;
     pointer-events: none;
 }
 
@@ -146,7 +145,7 @@ h3 {
 }
 
 /* =========================================
-   Menu Styles
+   Menu Styles (Responsive & Collision Aware)
 ========================================= */
 
 .main-menu {
@@ -175,7 +174,8 @@ h3 {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap; /* Allows menu to wrap if window is narrow */
+    gap: 0px; /* Gap removed to prevent alignment issues with dropdowns */
 }
 
 .menu-item {
@@ -192,7 +192,7 @@ h3 {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: color 0.2s ease, background-color 0.2s ease;
-    border-radius: 4px 4px 0 0;
+    border-radius: 4px;
 }
 
 .menu-item:hover .menu-link {
@@ -200,7 +200,7 @@ h3 {
     background-color: var(--bg-item);
 }
 
-/* Base Dropdown Styles */
+/* Dropdown Base */
 .dropdown,
 .nested-dropdown {
     list-style: none;
@@ -209,20 +209,18 @@ h3 {
     position: absolute;
     background-color: var(--bg-card);
     border: 1px solid var(--border-color);
-    border-radius: 0 4px 4px 4px;
+    border-radius: 4px;
     min-width: 220px;
     z-index: 100;
     display: none;
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-/* Primary Dropdown positioning */
 .dropdown {
     top: 100%;
     left: 0;
 }
 
-/* Show dropdowns on hover */
 .menu-item:hover > .dropdown {
     display: block;
 }
@@ -241,17 +239,62 @@ h3 {
     color: var(--text-primary);
 }
 
-/* Nested Dropdown Styles */
 .nested-menu {
     position: relative;
 }
 
 .nested-dropdown {
-    top: -11px; /* Aligns visually with the parent item's padding */
+    top: -11px;
     left: 100%;
-    border-radius: 4px;
 }
 
 .nested-menu:hover > .nested-dropdown {
     display: block;
+}
+
+/* Edge Protection: Last 3 items open dropdowns to the left */
+.menu-item:nth-last-child(-n+3) .dropdown {
+    left: auto;
+    right: 0;
+}
+
+.menu-item:nth-last-child(-n+3) .nested-dropdown {
+    left: auto;
+    right: 100%;
+}
+
+/* Mobile/Tablet View (Vertical Stacking) */
+@media (max-width: 900px) {
+    .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .menu-header-brand {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        width: 100%;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .menu-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-link {
+        padding: 15px 20px;
+    }
+
+    /* Change dropdowns from floating to accordion style */
+    .dropdown, .nested-dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+        background-color: var(--bg-item);
+        padding-left: 20px;
+    }
 }
