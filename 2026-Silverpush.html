@@ -104,26 +104,57 @@
         </div>
     </div>
 
-    <div id="assetModal" class="modal" onclick="closeModal()">
-        <span class="close-modal">&times;</span>
-        <video class="modal-content" id="vidFullSize" controls autoplay></video>
-    </div>
+<!-- Updated to stream video and display images -->
+<div id="assetModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgFullSize" style="display: none;">
+    
+    <video class="modal-content" id="videoFullSize" controls autoplay playsinline style="display: none;">
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
 
     <script>
         const modal = document.getElementById("assetModal");
         const modalVid = document.getElementById("vidFullSize");
 
-        function openModal(src) {
-            modal.style.display = "flex";
-            modalVid.src = src;
-            modalVid.play();
-        }
+        function openModal(url) {
+		const modal = document.getElementById("assetModal");
+    	const imgElement = document.getElementById("imgFullSize");
+    	const videoElement = document.getElementById("videoFullSize");
+    	const videoSource = document.getElementById("videoSource");
 
-        function closeModal() {
-            modal.style.display = "none";
-            modalVid.pause();
-            modalVid.src = "";
-        }
+    	modal.style.display = "flex";
+
+    	// Check if the URL is a video
+    	if (url.toLowerCase().includes('.mp4')) {
+        imgElement.style.display = "none";
+        videoElement.style.display = "block";
+        
+        // Load and play video
+        videoSource.src = url;
+        videoElement.load(); // Forces the browser to start looking at the file immediately
+        videoElement.play();
+    } else {
+        // Handle as image
+        videoElement.style.display = "none";
+        imgElement.style.display = "block";
+        imgElement.src = url;
+    }
+}
+
+		function closeModal() {
+		const modal = document.getElementById("assetModal");
+    	const videoElement = document.getElementById("videoFullSize");
+    
+    	modal.style.display = "none";
+    
+    	// Crucial: Stop the video and clear source so it doesn't keep loading in the background
+    	videoElement.pause();
+    	document.getElementById("videoSource").src = "";
+		videoElement.load();
+}
 
         // Prevent clicking the video controls from closing the modal
         modalVid.addEventListener('click', function(e) {
