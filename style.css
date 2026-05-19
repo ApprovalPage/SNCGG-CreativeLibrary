@@ -49,7 +49,7 @@ h2 {
 }
 
 .live-date {
-	font size: 12px;
+	font-size: 12px;
 	font-weight: 450;
 	color: var(--text-muted);
 }
@@ -172,7 +172,7 @@ h3 {
 .menu-header-brand {
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-primary);
+	    color: var(--text-primary);
     padding: 15px 25px 15px 0;
     border-right: 1px solid var(--border-color);
     margin-right: 20px;
@@ -307,4 +307,28 @@ h3 {
         background-color: var(--bg-item);
         padding-left: 20px;
     }
+}
+
+/* New style for the link container below headers */
+.header-links {
+    display: flex;
+    gap: 15px;
+    margin-top: -10px; /* Pulls it closer to the header */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.header-link {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+.header-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }
