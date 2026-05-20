@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Library</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    return;
+                }
+            }
+        }
+        document.addEventListener("DOMContentLoaded", includeHTML);
+    </script>
+</head>
+<body>
+
+    <div w3-include-html="menu.html"></div>
+
+    <div class="header">
+        <h1><span class="campaign-label">2026</span> Social</h1>
+    </div>
+
+    <div class="section-card">
+        <h2>Static Stories</h2>
+        <!--
+        <h3 id="#">Header</h3> -->
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-BestView-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-BestView-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-BestView-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-BestView-3</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+			<div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-3</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-4.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-4.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-4</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-5.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-1-TypeOn-5.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-1-TypeOn-5</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+			<div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-BestView-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-BestView-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-BestView-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-BestView-3</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-3</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-4.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-4.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-4</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-5.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-2-TypeOn-5.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-2-TypeOn-5</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-3</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-4.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-4.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-4</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-5.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-Campaign-4-TypeOn-5.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-Campaign-4-TypeOn-5</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-1.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-1.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-EarlyBird-1</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-2.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-2.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-EarlyBird-2</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-3.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-AM-Story-EarlyBird-3.png?raw=true">
+                <div class="asset-caption">SN-AM-Story-EarlyBird-3</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View1-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View1-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-360View1-Social-9x16</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View2-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View2-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-360View2-Social-9x16</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View3-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-360View3-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-360View3-Social-9x16</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-EarlyBird1-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-EarlyBird1-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-EarlyBird1-Social-9x16</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-FutureYou1-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-FutureYou1-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-FutureYou1-Social-9x16</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-FutureYou2-Social-9x16.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-BookEarly-FutureYou2-Social-9x16.png?raw=true">
+                <div class="asset-caption">SN-BookEarly-FutureYou2-Social-9x16</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-A.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-A.png?raw=true">
+                <div class="asset-caption">SN-ComboAwe-1080x1920-A</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-B.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-B.png?raw=true">
+                <div class="asset-caption">SN-ComboAwe-1080x1920-B</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-C.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-C.png?raw=true">
+                <div class="asset-caption">SN-ComboAwe-1080x1920-C</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-D.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-ComboAwe-1080x1920-D.png?raw=true">
+                <div class="asset-caption">SN-ComboAwe-1080x1920-D</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-8a.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-8a.png?raw=true">
+                <div class="asset-caption">SN-Social-8a</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-8b.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-8b.png?raw=true">
+                <div class="asset-caption">SN-Social-8b</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-11a.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-11a.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-11a</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-11b.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-11b.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-11b</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12a.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12a.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-12a</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12b.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12b.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-12b</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12c.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12c.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-12c</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12d.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-12d.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-12d</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13a.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13a.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-13a</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13b.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13b.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-13b</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13c.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13c.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-13c</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13d.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-13d.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-13d</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->  <p> &nbsp; </p>
+        <div class="asset-grid">
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-9a.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-9a.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-9a</div>
+            </div>
+            <div class="asset-item" onclick="openModal('https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-9b.png?raw=true')">
+                <img class="asset-thumbnail" src="https://github.com/ApprovalPage/SNCGG-CreativeLibrary/blob/main/2026/Social/Stories/SN-Social-Story-9b.png?raw=true">
+                <div class="asset-caption">SN-Social-Story-9b</div>
+            </div>
+        </div>
+
+		<!--
+        <h3>Header</h3> -->
+        <div class="asset-grid">
+
+        </div>
+		
+		<p>&nbsp;  </p>
+
+		<!--
+        <h3>Header</h3> -->
+        <div class="asset-grid">
+
+        </div>
+
+		<!--
+        <h3>Header</h3> -->
+        <div class="asset-grid">
+
+        </div>
+		
+		<p>&nbsp;  </p>
+
+		<!--
+        <h3>Header</h3> -->
+        <div class="asset-grid">
+
+        </div>
+		
+    </div>
+
+<div id="assetModal" class="modal" onclick="closeModal()">
+    <span class="close-modal">&times;</span>
+    <img class="modal-content" id="imgFullSize" style="display: none;">
+    
+    <video class="modal-content" id="videoFullSize" controls autoplay playsinline style="display: none;">
+        <source id="videoSource" src="" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</div>
+
+    <script>
+        const modal = document.getElementById("assetModal");
+        const modalImg = document.getElementById("imgFullSize");
+
+function openModal(url) {
+    const modal = document.getElementById("assetModal");
+    const imgElement = document.getElementById("imgFullSize");
+    const videoElement = document.getElementById("videoFullSize");
+    const videoSource = document.getElementById("videoSource");
+
+    modal.style.display = "flex";
+
+    // Check if the URL is a video
+    if (url.toLowerCase().includes('.mp4')) {
+        imgElement.style.display = "none";
+        videoElement.style.display = "block";
+        
+        // Load and play video
+        videoSource.src = url;
+        videoElement.load(); // Forces the browser to start looking at the file immediately
+        videoElement.play();
+    } else {
+        // Handle as image
+        videoElement.style.display = "none";
+        imgElement.style.display = "block";
+        imgElement.src = url;
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById("assetModal");
+    const videoElement = document.getElementById("videoFullSize");
+    
+    modal.style.display = "none";
+    
+    // Crucial: Stop the video and clear source so it doesn't keep loading in the background
+    videoElement.pause();
+    document.getElementById("videoSource").src = "";
+    videoElement.load();
+}
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+    </script>
+</body>
+</html>
