@@ -351,4 +351,7 @@ img.asset-thumbnail,
 video.asset-thumbnail {
     object-fit: cover;
     pointer-events: none;
+    width: 100%;
+    height: 100%;
+    background-color: #252525; /* Gives a clean placeholder if a frame is processing */
 }
