@@ -349,9 +349,9 @@ h3 {
 /* Applies to both your old image thumbs and new video thumbs */
 img.asset-thumbnail,
 video.asset-thumbnail {
-    object-fit: cover;
+    object-fit: contain;       /* Restores the uncropped, full shape of the asset */
     pointer-events: none;
-    width: 100%;
-    height: 100%;
-    background-color: #252525; /* Gives a clean placeholder if a frame is processing */
+    max-width: 100%;
+    height: 200px;             /* Standardizes the height so captions have room below */
+    background-color: #121212; /* Darker tone to letterbox narrow/wide assets cleanly */
 }
