@@ -172,11 +172,18 @@ h3 {
 .menu-header-brand {
     font-size: 20px;
     font-weight: 600;
-	    color: var(--text-primary);
+    color: var(--text-primary);
     padding: 15px 25px 15px 0;
     border-right: 1px solid var(--border-color);
     margin-right: 20px;
     letter-spacing: -0.5px;
+    text-decoration: none;         /* Forces the link to look exactly like the old div */
+    transition: color 0.2s ease;   /* Smoothly animates the mouseover effect */
+}
+
+/* New Mouseover Style Effect */
+.menu-header-brand:hover {
+    color: var(--text-secondary);  /* Dims slightly to your theme's gray to signify it's a link */
 }
 
 .menu-list {
